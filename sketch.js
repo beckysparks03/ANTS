@@ -26,6 +26,10 @@ const backgroundColour = "#FFFFFF";
 const antColour = "#29140D";
 const fireAntRed = "#9F241B";
 
+function getAntDisplayScale() {
+  return min(width, height) < 620 ? 1.6 : 1;
+}
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
@@ -521,7 +525,7 @@ class Ant {
 
     translate(0, sin(this.walkCycle * 2) * 0.3);
 
-    scale(this.size);
+    scale(this.size * getAntDisplayScale());
 
     stroke(antColour);
     fill(antColour);
@@ -657,3 +661,4 @@ function windowResized() {
     );
   }
 }
+
