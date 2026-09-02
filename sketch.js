@@ -27,7 +27,7 @@ const antColour = "#29140D";
 const fireAntRed = "#9F241B";
 
 function getAntDisplayScale() {
-  return min(width, height) < 620 ? 1.6 : 1;
+  return min(width, height) < 620 ? 1.3 : 1;
 }
 
 function setup() {
@@ -661,4 +661,5 @@ function windowResized() {
     );
   }
 }
+
 
